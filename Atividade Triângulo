@@ -1,0 +1,89 @@
+package com.company;
+import java.util.Scanner;
+public class Main {
+
+
+   public static void main(String[] args) {
+   Scanner sc = new Scanner(System.in);
+       System.out.println("Lado a: ");
+       double l1 = sc.nextDouble();
+       System.out.println("Lado b: ");
+       double l2 = sc.nextDouble();
+       System.out.println("Lado c: ");
+       double l3 = sc.nextDouble();
+
+
+       double p = (l1 + l2 + l3) / 2;
+       double areaX = Math.sqrt(p*(p-l1)*(p-l2)*(p-l3));
+       System.out.println("Area do triangulo x: " + areaX);
+
+
+       System.out.println("Lado a: ");
+       l1 = sc.nextDouble();
+       System.out.println("Lado b: ");
+       l2 = sc.nextDouble();
+       System.out.println("Lado c: ");
+       l3 = sc.nextDouble();
+
+
+       double p = (l1 + l2 + l3) / 2;
+       double areaY = Math.sqrt(p*(p-l1)*(p-l2)*(p-l3));
+       System.out.println("Area do triangulo x: " + areaY);
+
+
+       if(areaX > areaY){
+           System.out.println("Triangulo X é maior!");
+       }else{
+           System.out.println("Triangulo Y é maior!");
+       }
+   }
+}
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+public class Triangulo {
+   public double A;
+   public double B;
+   public double C;
+
+
+   public double calcularArea(){
+       double p = (A+B+C)/2;
+       double area = Math.sqrt(p*(p-A)*(p-B)*(p-C));
+       return area;
+   }
+}
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+import java.util.Scanner;
+public class TesteTriangulo {
+   public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+       Triangulo x, y;
+       x = new Triangulo();
+       y = new Triangulo();
+
+
+
+
+       System.out.println("Lado a: ");
+       x.A = sc.nextDouble();
+       System.out.println("Lado b: ");
+       x.B = sc.nextDouble();
+       System.out.println("Lado c: ");
+       x.C = sc.nextDouble();
+
+
+       System.out.println("Area X = " + x.calcularArea());
+
+
+       System.out.println("Lado a: ");
+       y.A = sc.nextDouble();
+       System.out.println("Lado b: ");
+       y.B = sc.nextDouble();
+       System.out.println("Lado c: ");
+       y.C = sc.nextDouble();
+
+
+       System.out.println("Area Y = " + y.calcularArea());
+   }
+}
