@@ -1,2 +1,2 @@
-# CalculadoraTri-ngulo-
+# CalculadoraTriangulo
 Atividade acadêmica 
